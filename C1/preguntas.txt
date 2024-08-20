@@ -1,0 +1,173 @@
+##¿Qué es un atributo en POO? 
+{ 
+~Una función que realiza acciones específicas.
+=Una variable que pertenece a una clase y define el estado de un objeto
+~Un bloque de código que se ejecuta automáticamente.
+~Un método que no pertenece a ninguna clase.
+}
+
+
+##¿Cuál es la diferencia entre composición y agregación? 
+{
+=La composición es una relación más fuerte, donde una clase es responsable del ciclo de vida de otra, mientras que en la agregación, las clases pueden existir independientemente
+~La agregación es una relación más fuerte que la composición.
+~La composición y la agregación son sinónimos en POO.
+~En la composición, las clases deben compartir atributos, mientras que en la agregación no es necesario.
+}
+
+##Considera el siguiente fragmento de código 
+{
+class Animal:
+    def hacer_sonido(self):
+        print("Sonido de animal")
+
+class Perro(Animal):
+    def hacer_sonido(self):
+        print("Ladrido")
+
+mi_animal = Perro()
+mi_animal.hacer_sonido()
+
+¿Qué imprimirá este código al ejecutarse? 
+
+~Sonido de animal
+=Ladrido
+~Error de compilación
+~Nada
+}
+
+##¿Cuál es el propósito de una clase abstracta? 
+{
+~Permitir la creación de instancias directamente.
+~Proporcionar una implementación completa de todos los métodos.
+=Definir métodos que deben ser implementados por las clases derivadas
+~Almacenar únicamente variables estáticas.
+}
+
+
+##¿Qué nivel de acceso permite que un atributo o método sea accesible solo dentro de la misma clase en la que se define? 
+java
+{
+class Ejemplo {
+    private int datoPrivado;
+
+    public Ejemplo() {
+        datoPrivado = 5;
+    }
+    
+    private void metodoPrivado() {
+        System.out.println("Método privado");
+    }
+}
+
+{
+~public.
+~protected.
+=private
+~default.
+}
+
+##Considera el siguiente fragmento de código 
+{
+
+class Ejemplo {
+public:
+    Ejemplo() {
+        std::cout << "Constructor llamado" << std::endl;
+    }
+    
+    ~Ejemplo() {
+        std::cout << "Destructor llamado" << std::endl;
+    }
+};
+
+int main() {
+    Ejemplo obj;
+    return 0;
+}
+{
+¿Qué salida producirá este código cuando se ejecute?
+
+~Constructor llamado.
+~Destructor llamado.
+=Constructor llamado seguido de Destructor llamado
+~No imprimirá nada.
+}
+
+##Imagina que tienes una clase base Vehículo con un atributo protected llamado velocidad. Describe cómo una clase derivada Coche podría utilizar este atributo. 
+{ 
+¿Qué ventajas ofrece el uso del nivel de acceso protected en este caso?
+}
+
+##Explica el concepto de herencia en POO y cómo facilita la reutilización de código.
+{
+ Proporciona un ejemplo en el que una clase derivada extiende una clase base.
+}
+
+##Completa el siguiente fragmento de código en Java para implementar una clase Libro con un constructor que inicializa el título y el autor, y un método para mostrar la 
+información del libro. Elige la opción que completa correctamente el fragmento.
+{
+
+class Libro {
+    private String titulo;
+    private String autor;
+
+    // Completa el constructor
+    public Libro(__________) {
+        this.titulo = titulo;
+        this.autor = autor;
+    }
+
+    public void mostrarInfo() {
+        System.out.println("Título: " + titulo + ", Autor: " + autor);
+    }
+}
+~String t, String a
+=String titulo, String autor
+~String title, String author
+~String t, String a
+
+}
+
+##Completa el siguiente fragmento de código en Java para demostrar el polimorfismo. Tienes una clase base Animal con un método hacerSonido, y dos clases derivadas Perro y Gato #10
+que sobrescriben este método. Elige la opción que completa correctamente el fragmento para que el método mostrarSonido muestre el sonido correcto para cada tipo de animal.
+{
+
+class Animal {
+    public void hacerSonido() {
+        System.out.println("Sonido de animal");
+    }
+}
+
+class Perro extends Animal {
+    @Override
+    public void hacerSonido() {
+        System.out.println("Ladrido");
+    }
+}
+
+class Gato extends Animal {
+    @Override
+    public void hacerSonido() {
+        System.out.println("Maullido");
+    }
+}
+
+public class Main {
+    public static void mostrarSonido(Animal animal) {
+        animal.__________;
+    }
+
+    public static void main(String[] args) {
+        Animal miPerro = new Perro();
+        Animal miGato = new Gato();
+        
+        mostrarSonido(miPerro);
+        mostrarSonido(miGato);
+    }
+}
+=hacerSonido()
+~hacerSonido() { }
+~System.out.println(hacerSonido());
+~animal.hacerSonido()
+}
